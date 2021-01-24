@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/UI.css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="top col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="budget text-center">
+                    <div class="budget_title">
+                        Available Budget in <span class="budget_title-month">%month%</span>
+                    </div>
+                    <div class="budget_value">+ 2,345.64</div>
+
+                    <div class="budget_income col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 mx-auto">
+
+                        <div class="budget_income-text col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 float-left">Income
+                        </div>
+                        <div class="budget_income-value col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 float-left">+ 4,300.00
+                        </div>
+                        <div class="budget_income-percentage">&nbsp;</div>
+
+                    </div>
+
+                    <div class="budget_expenses col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 mx-auto">
+
+                        <div class="budget_expenses-text col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 float-left">Expenses
+                        </div>
+                        <div class="budget_expenses-value col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 float-left">-
+                            3,300.00</div>
+                        <div class="budget_expenses-percentage"><small>45%</small></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="bottom col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+                <div class="add col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 mx-auto">
+                    <div class="add_container">
+
+                        <div class="inputs col-12 col-sm-12 col-md-11 col-lg-9 col-xl-8 mx-auto">
+
+                                    <select class="add_type col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 float-left">
+                                        <option value="inc" selected>+  </option>
+                                        <option value="exp">-</option>
+                                    </select>
+                                    <input type="text" class="add_description col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 float-left" placeholder="Add description">
+                                    <input type="number" class="add_value col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 float-left" placeholder="Value">
+                                    <button class="add_btn col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 float-left mx-auto"><i class="ion-ios-checkmark-outline"></i></button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+               
+                <div class="lists row clearfix">
+                    <div class="income col-12 col-sm-12 col-md-6 col-lg-6 ">
+
+                        <h2 class="income_title text-center">Income</h2>
+    
+                        <div id="inc" class="income_list ">
+                            
+                            <!-- <div class="item clearfix col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="item_description float-left">Salary</div>
+                                <div class="float-right">
+                                    <div class="item_value float-left">+ 2,100.00</div>
+                                    <div class="item_delete float-left">
+                                        <button class="item_delete-btn">
+                                            <i class="ion-ios-close-outline"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item clearfix col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="item_description float-left">Salary</div>
+                                <div class="float-right">
+                                    <div class="item_value float-left">+ 2,100.00</div>
+                                    <div class="item_delete float-left">
+                                        <button class="item_delete-btn">
+                                            <i class="ion-ios-close-outline"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div> -->
+                           
+                        </div>
+    
+                    </div>
+
+                    <div class="expenses col-12 col-sm-12 col-md-6 col-lg-6">
+
+                        <h2 class="expenses_title text-center">Expenses</h2>
+    
+                        <div id="exp" class="expenses_list">
+                           
+                            <!-- <div class="item clearfix col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="item_description float-left">Salary</div>
+                                <div class="float-right">
+                                    <div class="item_value float-left">+ 2,100.00</div>
+                                    <div class="item_percentage float-left">21%</div>
+                                    <div class="item_delete float-left">
+                                        <button class="item_delete-btn">
+                                            <i class="ion-ios-close-outline"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item clearfix col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="item_description float-left">Salary</div>
+                                <div class="float-right">
+                                    <div class="item_value float-left">+ 2,100.00</div>
+                                    <div class="item_percentage float-left">21%</div>
+                                    <div class="item_delete float-left">
+                                        <button class="item_delete-btn">
+                                            <i class="ion-ios-close-outline"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                        </div>
+    
+                    </div>
+
+                </div>
+
+                    
+                
+
+                
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <script src="js/logic.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
